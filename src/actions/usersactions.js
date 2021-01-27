@@ -19,13 +19,10 @@ export const fetchUsers = () => dispatch => {
     userRef.on("value", snapshot => {
       if (snapshot.val()) {
         const data = snapshot.val();
-        const arr = Object.keys(data).map(i => {
-          data[i].id = i
-          return data[i]
-        });
+        const arr = Object.keys(data).map(i => data[i]);
         dispatch({
           type: FETCH_ALL_USERS_SUCCESS,
-          payload: arr
+          payload: arr,
         });
       } else {
         dispatch({
