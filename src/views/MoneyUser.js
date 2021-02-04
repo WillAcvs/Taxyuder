@@ -103,7 +103,7 @@ class MoneyUser extends React.Component {
     renderContent(){
         if(this.state.users.length > 0){
             return (
-                <div style={{ display: "flex", flexDirection: "row" }}>
+                <div>
                 {
                     this.state.users.map(element => {
                         let key = Math.random();

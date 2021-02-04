@@ -53,7 +53,9 @@ export default function Bookings() {
         ];
 
   const [data, setData] = useState([]);
-  const bookingdata = useSelector(state => state.bookingdata);
+  const bookingdata = useSelector(state => {
+    return state.bookingdata;
+  });
 
   useEffect(()=>{
         if(bookingdata.bookings){

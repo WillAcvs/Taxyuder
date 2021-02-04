@@ -36,7 +36,7 @@ function AppMenu() {
       icon: <DashboardIcon />
     },
     {
-      name: "Usuarios",
+      name: "Conductores",
       route: "/drivers",
       icon: <PeopleIcon />
     },

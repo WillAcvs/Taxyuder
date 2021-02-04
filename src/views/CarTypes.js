@@ -43,7 +43,7 @@ export default function CarTypes() {
     { title: name, field: 'name' },
     { title: rate_per_km, field: 'rate_per_kilometer', type: 'numeric' },
     { title: rate_per_hour, field: 'rate_per_hour', type: 'numeric' },
-    { title: "Ubication", field: "ubication.name", type: "name", editable: "never", emptyValue: "No Configurado" },
+    { title: "Ubicación", field: "ubication.name", type: "name", editable: "never", emptyValue: "No Configurado" },
     { title: "Tarifa PU", field: "ubication.value", type: "numeric", editable: "never", emptyValue: 0 },
     { title: min_fare, field: 'min_fare', type: 'numeric' },
     { title: convenience_fee_percent, field: 'convenience_fees', type: 'numeric' }
@@ -83,7 +83,8 @@ export default function CarTypes() {
     columns={columns}
     data={data}
     options={{
-      exportButton: true 
+      exportButton: true,
+      pageSize: 10
     }}
     editable={{
       onRowAdd: newData =>

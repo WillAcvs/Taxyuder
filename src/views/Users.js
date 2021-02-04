@@ -78,7 +78,8 @@ export default function Users() {
       columns={columns}
       data={data}
       options={{
-        exportButton: true
+        exportButton: true,
+        pageSize: 20
       }}
       editable={{
         onRowUpdate: (newData, oldData) =>

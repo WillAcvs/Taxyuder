@@ -3,7 +3,7 @@ export default {
     trip_start_time:'Hora de inicio del viaje',
     trip_end_time:'Hora de finalización del viaje',
     customer_name:'Nombre del cliente',
-    car_type:'Ciudad',
+    car_type:'Configurar Servicio por Ciudad',
     vehicle_no:'Número de vehículo',
     pickup_address:'Dirección de recogida',
     drop_address:'Dirección de destino',

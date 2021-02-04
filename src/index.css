@@ -15,11 +15,11 @@ code {
 
 .card {
     width: 31%;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: white;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.146);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.146);
     padding: 10px;
-    margin: 0px 5px;
+    margin: 8px 5px;
     display: inline-block;
 }
 
@@ -28,7 +28,7 @@ code {
     text-align: center;
     color: white;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 3px;
     margin: 1px 0px;
 }
@@ -80,9 +80,10 @@ code {
     width: 30%;
     border-radius: 20px;
     padding: 15px;
-    box-shadow: 10px 10px 10px #0000003b;
+    box-shadow: 5px 5px 5px #0000003b;
     display: inline-flex;
     flex-direction: column;
+    margin: 8px 5px;
 }
 
 .container-close-item {
@@ -91,7 +92,7 @@ code {
     padding: 5px 15px;
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.548);
-    border-radius: 15px;
+    border-radius: 5px;
     width: 40%;
 }
 
@@ -156,4 +157,8 @@ img.inputCarSelect {
 img.inputCarSelect:hover {
     transition: .3s;
     transform: scale(1.1);
+}
+
+td .MuiTablePagination-toolbar {
+    flex-direction: row-reverse !important;
 }
