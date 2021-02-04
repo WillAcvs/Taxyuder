@@ -14,13 +14,15 @@ export const fetchBookings = () => dispatch => {
       if (snapshot.val()) {
         const data = snapshot.val();
         const arr = Object.keys(data).map(i => {
-          data[i].id = i
-          data[i].pickupAddress =  data[i].pickup.add;
-          data[i].dropAddress =  data[i].drop.add;
-          data[i].discount =  data[i].discount_amount?data[i].discount_amount:0;
-          data[i].cashPaymentAmount = data[i].cashPaymentAmount?data[i].cashPaymentAmount:0
-          data[i].cardPaymentAmount = data[i].cardPaymentAmount?data[i].cardPaymentAmount:0
-          return data[i]
+          if(data[i].status !== "CANCELLED"){
+            data[i].id = i
+            data[i].pickupAddress =  data[i].pickup.add;
+            data[i].dropAddress =  data[i].drop.add;
+            data[i].discount =  data[i].discount_amount?data[i].discount_amount:0;
+            data[i].cashPaymentAmount = data[i].cashPaymentAmount?data[i].cashPaymentAmount:0
+            data[i].cardPaymentAmount = data[i].cardPaymentAmount?data[i].cardPaymentAmount:0
+            return data[i]
+          }
         });
         dispatch({
           type: FETCH_BOOKINGS_SUCCESS,

@@ -56,6 +56,7 @@ const Dashboard = () => {
             let totconvenienceTrans = 0;
             let todayConvenience = 0;
             for(let i=0;i<bookingdata.bookings.length;i++){
+               if(!!bookingdata.bookings[i]){
                 const {trip_cost,discount_amount,tripdate,convenience_fees} = bookingdata.bookings[i];
                 let tDate = new Date(tripdate);
                 if(trip_cost>=0 && discount_amount >=0){
@@ -77,6 +78,7 @@ const Dashboard = () => {
                     } 
                     totconvenienceTrans  = totconvenienceTrans+convenience_fees;
                 }
+               }
             }
             setDailygross(parseFloat(tdTrans).toFixed(2));
             setMonthlygross(parseFloat(mnTrans).toFixed(2));
